@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  <title>jaskan muisti lista</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      jaska n.
+    </h1>
+  </header>
+    <nav class="section--navbar">
+      <ul>
+        <li>
+          <a href="#" onclick="console.log('show git')">Git</a>
+        </li>
+        <li>
+          <a href="#">Näppäinkomennot</a>
+        </li>
+      </ul>
+    </nav>
+  
+
+  <main class="wrapper">
+    <section class="section--git">
+      <h2 class="text--color-red">setup</h2>
+      <div class="entry entry--git-init ">
+        <code class="console">git init</code>
+        <p>Alottaa gittailun siinä kansiossa. Eli tällä aina aloitetaan.</p>
+      </div>
+      <div class="entry entry--git-config">
+        <code class="console console--multiline">git config <span class="text--color-red">--global user.name 'Jaska Numminen'</span></code>
+        <code class="console">git config <span class="text--color-red">--global user.email 'numminen.jaska@gmail.com'</span></code>
+        <p>Tälläin säädetään nää asetukset.</p>
+      </div>
+
+      <div class="entry entry-git--status">
+        <code class="console">git status</code>
+        <p>Kertoo että missä mennään.</p>
+      </div>
+      <div class="entry entry--git-add">
+        <code class="console">git add <span class="text--color-red">index.html</span></code>
+        <p>Valmistelee (stage) valitut tiedostot ja laittaa ne sinne valmistelualueelle. Voi käyttää valitsijoita kuten *.html jne.</p>
+      </div>
+      <div class="entry entry--git-rm">
+        <code class="console">git rm <span class="text--color-red">--cached index.html</span></code>
+        <p>Poistaa valitut tiedostot sieltä valmistelualueelta (eli staging area, missä ne staged filessit on).</p>
+      </div>
+      <div class="entry entry--git-commit">
+        <code class="console">git commit</code>
+        <p>Tallentaa kaikki valmistellut (staged files) tiedostot paikallisesti, mutta ei vielä tallenna niitä nettiin. Commited on siis pysyvästi muutettu suomeksi. Gitille pitää kertoa, että mitä tiedostoja sen pitää valmistella sillä <span class="text--color-red">$git add</span>-komennolla.</p>
+        <p>Muista pistää tälle komennoks että <span class="text--color-red">-m "tekstiä"</span> niin se määrittää sen commit-viestin. </p>
+      </div>
+      <div class="entry entry--git-branch">
+        <code class="console">git branch <span class="text--color-red">branchin nimi</span></code>
+        <p>Lisää uuden haaran, tai mikä nyt branch onkaan suomeks, tällä nimellä.</p>
+      </div>
+      <div class="entry entry--git-checkout">
+        <code class="console">git checkout <span class="text--color-red">branchin nimi</span></code>
+        <p>Vaihtaa johonkin toiseen branchiin.</p>
+      </div>
+      <div class="entry entry--git-merge">
+        <code class="console">git merge <span class="text--color-red">branchin nimi</span></code>
+        <p>Yhdistää tän branchin siihen ylempään.</p>
+      </div>
+      <div class="entry entry--git-remote">
+        <code class="console">git remote add origin <span class="text--color-red">https://github.com/rosvojaska/nimi.git</span></code>
+        <p>Tää synkkaa sen netin kanssa sen paikallisen gitin.</p>
+      </div>
+      <div class="entry entry--git-push">
+        <code class="console">git push</code>
+        <p>Pistää kaikki fileet mitkä on ensin valmisteltu (add) ja sitten pysyvästi muutettu (commit) sinne nettiin talteen.</p>
+      </div>
+      <div class="entry entry--git-ignore">
+        <code class="console">touch .gitignore</code>
+        <p>Tää tekee sellasen .gitignore-tiedoston, mihin voi lisätä ne tiedostot jota ei halua lisättävän siihen gittiin. Kansiot tulee tyyliin /dir</p>
+      </div>
+    </section>
+    
+    <section class="section--shortcut">
+
+      <h2 class="text--color-red text--linebreak">visual code</h2>
+      <div class="entry entry-shortcut--">
+        <div class="shortcut">
+          <span class="shortcut--key">CTRL</span> + <span class="shortcut--key">K</span>
+          <i class="material-icons icon--arrow icon--size-big">arrow_right_alt</i>
+          <span class="shortcut--key">CTRL</span> + <span class="shortcut--key">C</span> 
+        </div>
+      <p>Add line comment</p>
+      </div>
+      <div class="entry entry-shortcut--">
+        <div class="shortcut">
+          <span class="shortcut--key">ALT</span> + <span class="shortcut--key">Z</span>
+        </div>
+        <p>Toggle word wrap</p>
+      </div>  
+      <h2 class="text--color-red">opera</h2>
+      <div class="entry entry-shortcut--">
+        <div class="shortcut">
+          <span class="shortcut--key">CTRL</span> + <span class="shortcut--key">SHIFT</span> + <span class="shortcut--key">i</span>
+        </div>
+        <p>Open developer tools</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
