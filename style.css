@@ -40,12 +40,15 @@ header {
 .section--navbar { 
   font-size: 20px;
   list-style: none;
-  margin-bottom: 5em;
+  margin-bottom: 4.9em;
   background-color: #ff5f1f;
   padding-left: 2em;
 }
 .section--navbar li { display: inline-block; }
-.section--navbar li a { text-decoration: none; }
+.section--navbar li a {
+  text-decoration: none;
+  margin-right: 2em;
+}
 .section--navbar a:link,
 .section--navbar a:visited {
   color: #000;
@@ -56,7 +59,6 @@ header {
 .section--navbar a:hover,
 .section--navbar a:active {
   background-color: #fff;
-  text-transform: uppercase;
 }
 .wrapper {
   max-width: 50em;
@@ -67,17 +69,17 @@ header {
 /* ⛵  3. 💻  konsolia matkiva teksti 💻
    ⛵  eli musta tausta ja monospace teksti
    ⛵ */
-
-.console {
-  font-family: monospace;
-  color: #fff;
-  background-color: #000;
-  padding: 1.2em 0 1.2em 1em;
-  margin-bottom: 0.5em;
-  display: inline-block;
-  width:100%;
-}
-.console::before {
+   .console {
+    white-space: pre;
+    font-family: monospace;
+    color: #fff;
+    background-color: #000;
+    padding: 1.2em 0 1.2em 1em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+    width:100%;
+  }
+   .console::before {
   color: #09ff00;
   content: "$ ";
 }
@@ -135,12 +137,13 @@ header {
 .text--color-red {
   color: #d30000;
 }
+.text--linebreak {
+  margin-bottom: 1.5rem;
+}
 h2 {
   word-spacing: 0.1rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 1.5rem;
 }
-
 h2::after {
   display: block;
   height: 0.5rem;
@@ -148,7 +151,6 @@ h2::after {
   background-image: linear-gradient(to bottom, #5900ff, rgba(0, 0, 0, 0));
   content: "";
 }
-
 .entry {
   margin-bottom: 1.4rem;
   padding: 0.2rem;
